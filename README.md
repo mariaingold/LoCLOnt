@@ -1,14 +1,14 @@
 # LoCLOnt
 
 Local Community Library Ontology (LoCLOnt) v 0.1  
-LoCLOnt is a prototype ontology representing book concepts and novel relationships to enable AI semantic search  
+LoCLOnt is a prototype OWL 2 ontology representing book concepts and novel relationships to enable Artificial Intelligence (AI) semantic search.  
 Follows an Online Public Access Catalogue (OPAC) search structure.  
 Introduces genrefication, audience-appropriate classification, and new releases.  
-Associated report: LoCLOnt Modelling Report (Ingold, M., 2024)  
+Associated report: LoCLOnt Modelling Report (Ingold, 2024)  
 
 ## AUTHOR: Maria Ingold
 
-UoEO MSc AI Knowledge Representation and Reasoning Individual Modelling Assignment
+UoEO MSc AI Knowledge Representation and Reasoning Individual Modelling Assignment  
 Assignment date: 12 February, 2024  
 
 ## INSTRUCTIONS
@@ -16,6 +16,7 @@ Assignment date: 12 February, 2024
 Open LoCLOnt.owl in Protégé.  
 SPARQL Query 3.0.0 only works in Protégé 5.5.0.  
 Uses Pellet reasoner 2.2.0.  
+View associated report for First Order Logic competency questions and associated SPARQL queries to test.  
 
 ## TOOLS
 
