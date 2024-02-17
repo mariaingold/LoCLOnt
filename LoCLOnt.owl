@@ -1,0 +1,834 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#"
+     xml:base="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt">
+        <rdfs:comment>KRR: Local Community-funded Library Ontology</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#hasAudience -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#hasAudience">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#isAudienceOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#hasGenre">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#isGenreOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookGenre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#isAudienceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#isAudienceOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#isGenreOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#isGenreOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#searchType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#searchType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Search"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#SearchType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#author -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#author">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#isbn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#isbn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#publicationYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#publicationYear">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#searchDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#searchDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Search"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ActionAdventureGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ActionAdventureGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AdultAudience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AdultAudience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AnimalsGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AnimalsGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ArtGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ArtGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AudioBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AudioBook">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BiographyAutobiographyGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BiographyAutobiographyGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BoardBooksAudience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BoardBooksAudience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#hasAudience"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#hasGenre"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookGenre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#hasAudience"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#hasGenre"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookGenre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookGenre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BrailleBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BrailleBook">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BusinessEconomicsGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BusinessEconomicsGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ChapterBookAudience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ChapterBookAudience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ComingOfAgeGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ComingOfAgeGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ComputersGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ComputersGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#CookingGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#CookingGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#DramaGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#DramaGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#EarlyReaderAudience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#EarlyReaderAudience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#EducationGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#EducationGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ElectronicBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ElectronicBook">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FantasyGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FantasyGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookGenre"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ForeignLanguageStudyGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ForeignLanguageStudyGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#GardeningGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#GardeningGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HardbackBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HardbackBook">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HistoricalGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HistoricalGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HistoryGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HistoryGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HorrorGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HorrorGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HumorGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HumorGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HumorousGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HumorousGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#LargePrintBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#LargePrintBook">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#LiteraryGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#LiteraryGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MedicalGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MedicalGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MiddleGradeAudience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MiddleGradeAudience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MusicGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MusicGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MysteryDetectiveGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MysteryDetectiveGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NatureGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NatureGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PaperbackBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PaperbackBook">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PetsGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PetsGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PictureBooksAudience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PictureBooksAudience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#RomanceGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#RomanceGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ScienceFictionGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ScienceFictionGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ScienceGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ScienceGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Search -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Search"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#SearchType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#SearchType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Advanced"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Audience"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Author"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Genre"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ISBN"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Keyword"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PublicationYear"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Standard"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Title"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#SelfHelpGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#SelfHelpGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#SportsRecreationGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#SportsRecreationGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ThrillersGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ThrillersGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#TravelGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#TravelGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#TrueCrimeGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#TrueCrimeGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#NonFictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#WesternsGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#WesternsGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FictionGenre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#YoungAdultAudience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#YoungAdultAudience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Adult -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Adult">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AdultAudience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Advanced -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Advanced"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AmericanGodsPaperback -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AmericanGodsPaperback">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PaperbackBook"/>
+        <hasAudience rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Adult"/>
+        <hasGenre rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Fantasy"/>
+        <hasGenre rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ScienceFiction"/>
+        <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neil Gaiman</author>
+        <isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0755322819</isbn>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</publicationYear>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American Gods</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AreYouThereGodPaperback -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AreYouThereGodPaperback">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PaperbackBook"/>
+        <hasAudience rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MiddleGrade"/>
+        <hasAudience rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#YoungAdult"/>
+        <hasGenre rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ComingOfAge"/>
+        <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Judy Blume</author>
+        <isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1035028492</isbn>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2023</publicationYear>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Are You There God? It&apos;s Me, Margaret</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ArtemisFowlPaperback -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ArtemisFowlPaperback">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PaperbackBook"/>
+        <hasAudience rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MiddleGrade"/>
+        <hasAudience rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#YoungAdult"/>
+        <hasGenre rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Fantasy"/>
+        <hasGenre rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ScienceFiction"/>
+        <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eoin Colfer</author>
+        <isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9780141339092</isbn>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</publicationYear>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artemis Fowl</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Audience -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Audience"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Author -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Author"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ComingOfAge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ComingOfAge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ComingOfAgeGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Fantasy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Fantasy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#FantasyGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Genre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Historical -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Historical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HistoricalGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ISBN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ISBN"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Keyword -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Keyword">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#SearchType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MiddleGrade -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MiddleGrade">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MiddleGradeAudience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#OutlanderPaperback -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#OutlanderPaperback">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PaperbackBook"/>
+        <hasAudience rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Adult"/>
+        <hasGenre rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Fantasy"/>
+        <hasGenre rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Historical"/>
+        <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diana Gabaldon</author>
+        <isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1784751375</isbn>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</publicationYear>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outlander</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PublicationYear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PublicationYear"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Romance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Romance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#RomanceGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ScienceFiction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ScienceFiction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ScienceFictionGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Standard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Standard"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Title -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Title"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#YoungAdult -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#YoungAdult">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#YoungAdultAudience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AdultAudience"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BoardBooksAudience"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ChapterBookAudience"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#EarlyReaderAudience"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#MiddleGradeAudience"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PictureBooksAudience"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#YoungAdultAudience"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#AudioBook"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BrailleBook"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#ElectronicBook"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#HardbackBook"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#LargePrintBook"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#PaperbackBook"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Book"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookAudience"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#BookGenre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#Search"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mariaingold/ontologies/2024/0/LoCLOnt#SearchType"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
